@@ -1,0 +1,22 @@
+{
+  "imprint": {
+    "de": {
+      "title": "Impressum",
+      "content": "Angaben gemäß § 5 TMG\n\nMax Mustermann\nMusterstraße 1\n54290 Trier\n\nKontakt:\nE-Mail: mail@example.com\n\nVerantwortlich für den Inhalt nach § 55 Abs. 2 RStV:\nMax Mustermann"
+    },
+    "en": {
+      "title": "Imprint",
+      "content": "Information according to § 5 TMG\n\nMax Mustermann\nMusterstraße 1\n54290 Trier, Germany\n\nContact:\nEmail: mail@example.com\n\nResponsible for content according to § 55 Abs. 2 RStV:\nMax Mustermann"
+    }
+  },
+  "privacy": {
+    "de": {
+      "title": "Datenschutzerklärung",
+      "content": "1. Datenschutz auf einen Blick\n\nAllgemeine Hinweise\nDie folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.\n\n2. Hosting\nDiese Website wird statisch gehostet. Es werden keine personenbezogenen Daten serverseitig verarbeitet.\n\n3. Ihre Rechte\nSie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten."
+    },
+    "en": {
+      "title": "Privacy Policy",
+      "content": "1. Privacy at a Glance\n\nGeneral Information\nThe following notes provide a simple overview of what happens to your personal data when you visit this website.\n\n2. Hosting\nThis website is statically hosted. No personal data is processed on the server side.\n\n3. Your Rights\nYou have the right to obtain information about the origin, recipient, and purpose of your stored personal data at any time free of charge."
+    }
+  }
+}

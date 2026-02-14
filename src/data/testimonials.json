@@ -1,0 +1,13 @@
+[
+  {
+    "id": "testimonial-1",
+    "quote": {
+      "de": "Ein herausragender Kollege mit exzellentem technischen Verständnis und starker Teamfähigkeit.",
+      "en": "An outstanding colleague with excellent technical understanding and strong team skills."
+    },
+    "name": "Dr. Anna Beispiel",
+    "position": { "de": "Abteilungsleiterin IT", "en": "Head of IT Department" },
+    "company": "Tech Solutions GmbH",
+    "companyUrl": "https://www.example.com"
+  }
+]

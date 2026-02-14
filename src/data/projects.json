@@ -1,0 +1,22 @@
+[
+  {
+    "id": "portfolio-platform",
+    "title": { "de": "Portfolio & CV Platform", "en": "Portfolio & CV Platform" },
+    "shortDescription": {
+      "de": "Dynamische Portfolio-Webseite mit React, TypeScript und datengetriebenem Design.",
+      "en": "Dynamic portfolio website with React, TypeScript and data-driven design."
+    },
+    "fullDescription": {
+      "de": "Eine professionelle, erweiterbare Portfolio-Plattform, die alle Inhalte aus JSON-Dateien bezieht. Features: Mehrsprachigkeit, Dark Mode, PDF-Viewer, animierte Statistiken, druckbarer Lebenslauf.",
+      "en": "A professional, extensible portfolio platform that sources all content from JSON files. Features: Multilingual support, dark mode, PDF viewer, animated statistics, printable CV."
+    },
+    "thumbnail": "/assets/images/projects/portfolio-platform.png",
+    "tags": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "category": "web",
+    "githubUrl": "",
+    "documentationPdf": "",
+    "pdfViewerMode": "modal",
+    "date": "2026-02",
+    "featured": true
+  }
+]

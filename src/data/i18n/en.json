@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "profile": "Profile",
+    "career": "Career",
+    "education": "Education",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "blog": "Blog",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read more",
+    "download": "Download",
+    "viewPdf": "View PDF",
+    "present": "Present",
+    "backToOverview": "Back to overview",
+    "filterAll": "All",
+    "noResults": "No results found.",
+    "yearsExperience": "Years Experience",
+    "projectsCount": "Projects",
+    "certificatesCount": "Certificates",
+    "technologiesCount": "Technologies"
+  },
+  "contact": {
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Your message...",
+    "submit": "Submit",
+    "successMessage": "Thank you! Your message has been prepared.",
+    "validation": {
+      "nameRequired": "Name is required.",
+      "emailInvalid": "Please enter a valid email.",
+      "messageRequired": "Message is required."
+    }
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "copyright": "© {year} — All rights reserved."
+  },
+  "print": {
+    "title": "Curriculum Vitae",
+    "personalInfo": "Personal Information",
+    "workExperience": "Work Experience",
+    "educationSection": "Education",
+    "skillsSection": "Skills",
+    "certificatesSection": "Certificates"
+  }
+}
