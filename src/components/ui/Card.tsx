@@ -12,15 +12,10 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          'rounded-xl border p-6 transition-all duration-200',
+          'rounded-xl border border-border bg-card-bg p-6 shadow-[0_1px_3px_var(--color-card-shadow)] transition-all duration-200',
           hover && 'hover:-translate-y-1 hover:shadow-lg cursor-pointer',
           className
         )}
-        style={{
-          backgroundColor: 'var(--color-card-bg)',
-          borderColor: 'var(--color-border)',
-          boxShadow: `0 1px 3px var(--color-card-shadow)`,
-        }}
         {...props}
       >
         {children}

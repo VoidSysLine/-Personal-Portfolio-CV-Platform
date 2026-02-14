@@ -9,9 +9,9 @@ interface BadgeProps {
 
 export function Badge({ children, variant = 'default', className }: BadgeProps): ReactNode {
   const variantStyles = {
-    default: 'bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)]',
-    accent: 'bg-[var(--color-accent-light)] text-[var(--color-accent)]',
-    outline: 'border border-[var(--color-border)] text-[var(--color-text-secondary)] bg-transparent',
+    default: 'bg-bg-tertiary text-text-secondary',
+    accent: 'bg-accent-light text-accent',
+    outline: 'border border-border text-text-secondary bg-transparent',
   };
 
   return (

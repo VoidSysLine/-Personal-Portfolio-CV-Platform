@@ -7,9 +7,6 @@ interface SkeletonProps {
 
 export function Skeleton({ className }: SkeletonProps): ReactNode {
   return (
-    <div
-      className={cn('animate-pulse rounded-lg', className)}
-      style={{ backgroundColor: 'var(--color-bg-tertiary)' }}
-    />
+    <div className={cn('animate-pulse rounded-lg bg-bg-tertiary', className)} />
   );
 }

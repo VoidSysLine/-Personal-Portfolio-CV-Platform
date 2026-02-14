@@ -17,8 +17,7 @@ export function PdfModalViewer({ isOpen, onClose, pdfPath, title }: PdfModalView
         <iframe
           src={pdfPath}
           title={title || 'PDF Document'}
-          className="h-[75vh] w-full rounded-lg"
-          style={{ border: 'none' }}
+          className="h-[75vh] w-full rounded-lg border-0"
         />
         <div className="mt-4 flex justify-end">
           <a href={pdfPath} download>

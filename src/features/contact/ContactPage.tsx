@@ -26,25 +26,21 @@ export default function ContactPage(): ReactNode {
 
         <AnimatedSection delay={0.2} className="lg:col-span-2">
           <Card className="h-full">
-            <h3
-              className="mb-6 text-lg font-semibold"
-              style={{ color: 'var(--color-text-primary)' }}
-            >
+            <h3 className="mb-6 text-lg font-semibold text-text-primary">
               {locale === 'de' ? 'Kontaktinformationen' : 'Contact Information'}
             </h3>
 
             <div className="space-y-4">
               <a
                 href={`mailto:${profile.email}`}
-                className="flex items-center gap-3 text-sm transition-colors"
-                style={{ color: 'var(--color-text-secondary)' }}
+                className="flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-text-primary"
               >
-                <Mail size={18} style={{ color: 'var(--color-accent)' }} />
+                <Mail size={18} className="text-accent" />
                 {profile.email}
               </a>
 
-              <div className="flex items-center gap-3 text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                <MapPin size={18} style={{ color: 'var(--color-accent)' }} />
+              <div className="flex items-center gap-3 text-sm text-text-secondary">
+                <MapPin size={18} className="text-accent" />
                 {profile.location[locale]}
               </div>
 
@@ -53,10 +49,9 @@ export default function ContactPage(): ReactNode {
                   href={profile.social.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm transition-colors"
-                  style={{ color: 'var(--color-text-secondary)' }}
+                  className="flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-text-primary"
                 >
-                  <Github size={18} style={{ color: 'var(--color-accent)' }} />
+                  <Github size={18} className="text-accent" />
                   GitHub
                 </a>
               )}
@@ -66,10 +61,9 @@ export default function ContactPage(): ReactNode {
                   href={profile.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm transition-colors"
-                  style={{ color: 'var(--color-text-secondary)' }}
+                  className="flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-text-primary"
                 >
-                  <Linkedin size={18} style={{ color: 'var(--color-accent)' }} />
+                  <Linkedin size={18} className="text-accent" />
                   LinkedIn
                 </a>
               )}

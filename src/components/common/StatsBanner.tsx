@@ -53,27 +53,16 @@ export function StatsBanner({ stats, className }: StatsBannerProps): ReactNode {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className={cn(
-        'grid grid-cols-2 gap-6 rounded-2xl border p-8 lg:grid-cols-4',
+        'grid grid-cols-2 gap-6 rounded-2xl border border-border bg-card-bg p-8 shadow-[0_4px_6px_var(--color-card-shadow)] lg:grid-cols-4',
         className
       )}
-      style={{
-        backgroundColor: 'var(--color-card-bg)',
-        borderColor: 'var(--color-border)',
-        boxShadow: '0 4px 6px var(--color-card-shadow)',
-      }}
     >
       {stats.map((stat, index) => (
         <div key={index} className="text-center">
-          <div
-            className="text-3xl font-bold sm:text-4xl"
-            style={{ color: 'var(--color-accent)' }}
-          >
+          <div className="text-3xl font-bold text-accent sm:text-4xl">
             <CountUpNumber value={stat.value} suffix={stat.suffix} />
           </div>
-          <div
-            className="mt-1 text-sm font-medium"
-            style={{ color: 'var(--color-text-secondary)' }}
-          >
+          <div className="mt-1 text-sm font-medium text-text-secondary">
             {stat.label[locale]}
           </div>
         </div>

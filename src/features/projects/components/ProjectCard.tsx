@@ -15,10 +15,7 @@ export function ProjectCard({ project }: ProjectCardProps): ReactNode {
   return (
     <Card hover>
       {project.thumbnail && (
-        <div
-          className="mb-4 -mx-6 -mt-6 h-48 overflow-hidden rounded-t-xl"
-          style={{ backgroundColor: 'var(--color-bg-tertiary)' }}
-        >
+        <div className="mb-4 -mx-6 -mt-6 h-48 overflow-hidden rounded-t-xl bg-bg-tertiary">
           <img
             src={project.thumbnail}
             alt={project.title[locale]}
@@ -32,27 +29,15 @@ export function ProjectCard({ project }: ProjectCardProps): ReactNode {
       )}
 
       <div className="flex items-start justify-between gap-2">
-        <h3
-          className="text-lg font-semibold"
-          style={{ color: 'var(--color-text-primary)' }}
-        >
+        <h3 className="text-lg font-semibold text-text-primary">
           {project.title[locale]}
         </h3>
-        <span
-          className="shrink-0 rounded-full px-2 py-0.5 text-xs"
-          style={{
-            backgroundColor: 'var(--color-bg-tertiary)',
-            color: 'var(--color-text-muted)',
-          }}
-        >
+        <span className="shrink-0 rounded-full bg-bg-tertiary px-2 py-0.5 text-xs text-text-muted">
           {project.date}
         </span>
       </div>
 
-      <p
-        className="mt-2 text-sm leading-relaxed"
-        style={{ color: 'var(--color-text-secondary)' }}
-      >
+      <p className="mt-2 text-sm leading-relaxed text-text-secondary">
         {project.shortDescription[locale]}
       </p>
 
@@ -62,17 +47,13 @@ export function ProjectCard({ project }: ProjectCardProps): ReactNode {
         ))}
       </div>
 
-      <div
-        className="mt-4 flex items-center gap-3 border-t pt-4"
-        style={{ borderColor: 'var(--color-border)' }}
-      >
+      <div className="mt-4 flex items-center gap-3 border-t border-border pt-4">
         {project.githubUrl && (
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: 'var(--color-text-secondary)' }}
+            className="flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
             aria-label="GitHub Repository"
           >
             <Github size={16} />
@@ -80,10 +61,7 @@ export function ProjectCard({ project }: ProjectCardProps): ReactNode {
           </a>
         )}
         {!project.githubUrl && (
-          <span
-            className="flex items-center gap-1.5 text-sm opacity-40"
-            style={{ color: 'var(--color-text-muted)' }}
-          >
+          <span className="flex items-center gap-1.5 text-sm text-text-muted opacity-40">
             <Github size={16} />
             GitHub
           </span>
@@ -93,8 +71,7 @@ export function ProjectCard({ project }: ProjectCardProps): ReactNode {
             href={project.documentationPdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: 'var(--color-accent)' }}
+            className="flex items-center gap-1.5 text-sm text-accent transition-colors hover:text-accent-hover"
           >
             <FileText size={16} />
             {t('common.viewPdf')}

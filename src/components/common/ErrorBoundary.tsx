@@ -36,14 +36,11 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 
       return (
         <div className="flex min-h-[300px] flex-col items-center justify-center gap-4 p-8 text-center">
-          <AlertTriangle size={48} style={{ color: 'var(--color-error)' }} />
-          <h3
-            className="text-xl font-semibold"
-            style={{ color: 'var(--color-text-primary)' }}
-          >
+          <AlertTriangle size={48} className="text-error" />
+          <h3 className="text-xl font-semibold text-text-primary">
             Etwas ist schiefgelaufen
           </h3>
-          <p style={{ color: 'var(--color-text-secondary)' }}>
+          <p className="text-text-secondary">
             Ein unerwarteter Fehler ist aufgetreten.
           </p>
           <Button onClick={this.handleReset} variant="outline">

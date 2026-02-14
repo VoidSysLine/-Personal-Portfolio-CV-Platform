@@ -3,6 +3,7 @@ import { useI18n } from '@/hooks/useI18n';
 import { getProjectEntries } from '@/lib/dataLoader';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { ProjectGrid } from './components/ProjectGrid';
+import { cn } from '@/lib/cn';
 
 export default function ProjectsPage(): ReactNode {
   const { t } = useI18n();
@@ -29,11 +30,10 @@ export default function ProjectsPage(): ReactNode {
       <div className="mb-8 flex flex-wrap gap-2">
         <button
           onClick={() => setActiveFilter('all')}
-          className="rounded-full px-4 py-1.5 text-sm font-medium transition-colors"
-          style={{
-            backgroundColor: activeFilter === 'all' ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-            color: activeFilter === 'all' ? 'white' : 'var(--color-text-secondary)',
-          }}
+          className={cn(
+            'rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
+            activeFilter === 'all' ? 'bg-accent text-white' : 'bg-bg-tertiary text-text-secondary'
+          )}
         >
           {t('common.filterAll')}
         </button>
@@ -41,11 +41,10 @@ export default function ProjectsPage(): ReactNode {
           <button
             key={tag}
             onClick={() => setActiveFilter(tag)}
-            className="rounded-full px-4 py-1.5 text-sm font-medium transition-colors"
-            style={{
-              backgroundColor: activeFilter === tag ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-              color: activeFilter === tag ? 'white' : 'var(--color-text-secondary)',
-            }}
+            className={cn(
+              'rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
+              activeFilter === tag ? 'bg-accent text-white' : 'bg-bg-tertiary text-text-secondary'
+            )}
           >
             {tag}
           </button>
@@ -55,7 +54,7 @@ export default function ProjectsPage(): ReactNode {
       {filteredProjects.length > 0 ? (
         <ProjectGrid projects={filteredProjects} />
       ) : (
-        <p className="text-center py-12" style={{ color: 'var(--color-text-muted)' }}>
+        <p className="text-center py-12 text-text-muted">
           {t('common.noResults')}
         </p>
       )}

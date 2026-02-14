@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { FileText } from 'lucide-react';
+import { cn } from '@/lib/cn';
 
 interface PdfThumbnailProps {
   onClick?: () => void;
@@ -10,14 +11,13 @@ export function PdfThumbnail({ onClick, className }: PdfThumbnailProps): ReactNo
   return (
     <button
       onClick={onClick}
-      className={`flex h-32 w-24 flex-col items-center justify-center rounded-lg border transition-all hover:shadow-md ${className || ''}`}
-      style={{
-        backgroundColor: 'var(--color-bg-tertiary)',
-        borderColor: 'var(--color-border)',
-      }}
+      className={cn(
+        'flex h-32 w-24 flex-col items-center justify-center rounded-lg border border-border bg-bg-tertiary transition-all hover:shadow-md',
+        className
+      )}
     >
-      <FileText size={32} style={{ color: 'var(--color-accent)' }} />
-      <span className="mt-2 text-xs" style={{ color: 'var(--color-text-muted)' }}>PDF</span>
+      <FileText size={32} className="text-accent" />
+      <span className="mt-2 text-xs text-text-muted">PDF</span>
     </button>
   );
 }

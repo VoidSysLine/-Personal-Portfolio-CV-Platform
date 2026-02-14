@@ -33,17 +33,15 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps): Reac
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 z-50 h-full w-72 p-6 shadow-xl md:hidden"
-            style={{ backgroundColor: 'var(--color-bg-primary)' }}
+            className="fixed right-0 top-0 z-50 h-full w-72 bg-bg-primary p-6 shadow-xl md:hidden"
           >
             <div className="mb-8 flex items-center justify-between">
-              <span className="text-lg font-bold" style={{ color: 'var(--color-text-primary)' }}>
+              <span className="text-lg font-bold text-text-primary">
                 Menu
               </span>
               <button
                 onClick={onClose}
-                className="rounded-lg p-2 transition-colors"
-                style={{ color: 'var(--color-text-secondary)' }}
+                className="rounded-lg p-2 text-text-secondary transition-colors hover:bg-bg-tertiary"
                 aria-label="Close menu"
               >
                 <X size={24} />
@@ -58,7 +56,7 @@ export function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps): Reac
               ))}
             </nav>
 
-            <div className="mt-8 flex items-center gap-3 border-t pt-6" style={{ borderColor: 'var(--color-border)' }}>
+            <div className="mt-8 flex items-center gap-3 border-t border-border pt-6">
               <LanguageSwitch />
               <ThemeToggle />
             </div>

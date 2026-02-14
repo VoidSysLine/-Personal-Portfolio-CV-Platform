@@ -50,13 +50,7 @@ export default function ProfilePage(): ReactNode {
             transition={{ duration: 0.6 }}
           >
             <div className="mb-6 flex justify-center">
-              <div
-                className="h-32 w-32 overflow-hidden rounded-full ring-4 sm:h-40 sm:w-40"
-                style={{
-                  backgroundColor: 'var(--color-bg-tertiary)',
-                  boxShadow: '0 0 0 4px var(--color-accent)',
-                }}
-              >
+              <div className="h-32 w-32 overflow-hidden rounded-full bg-bg-tertiary ring-4 ring-accent sm:h-40 sm:w-40">
                 <img
                   src={profile.profileImage}
                   alt={profile.name}
@@ -68,24 +62,15 @@ export default function ProfilePage(): ReactNode {
               </div>
             </div>
 
-            <h1
-              className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
-              style={{ color: 'var(--color-text-primary)' }}
-            >
+            <h1 className="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
               {profile.name}
             </h1>
 
-            <p
-              className="mt-3 text-xl sm:text-2xl"
-              style={{ color: 'var(--color-accent)' }}
-            >
+            <p className="mt-3 text-xl text-accent sm:text-2xl">
               {profile.title[locale]}
             </p>
 
-            <p
-              className="mx-auto mt-4 max-w-2xl text-lg"
-              style={{ color: 'var(--color-text-secondary)' }}
-            >
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
               {profile.tagline[locale]}
             </p>
 
@@ -119,8 +104,7 @@ export default function ProfilePage(): ReactNode {
           >
             <ChevronDown
               size={28}
-              className="mx-auto animate-bounce"
-              style={{ color: 'var(--color-text-muted)' }}
+              className="mx-auto animate-bounce text-text-muted"
             />
           </motion.div>
         </div>
@@ -135,20 +119,14 @@ export default function ProfilePage(): ReactNode {
       <section className="mx-auto max-w-4xl px-4 py-20">
         <AnimatedSection>
           <SectionHeading title={locale === 'de' ? 'Über mich' : 'About Me'} />
-          <p
-            className="text-lg leading-relaxed"
-            style={{ color: 'var(--color-text-secondary)' }}
-          >
+          <p className="text-lg leading-relaxed text-text-secondary">
             {profile.bio[locale]}
           </p>
         </AnimatedSection>
       </section>
 
       {/* Skills Section */}
-      <section
-        className="py-20"
-        style={{ backgroundColor: 'var(--color-bg-secondary)' }}
-      >
+      <section className="bg-bg-secondary py-20">
         <div className="mx-auto max-w-4xl px-4">
           <AnimatedSection>
             <SectionHeading title={locale === 'de' ? 'Kompetenzen' : 'Skills'} />
@@ -157,17 +135,8 @@ export default function ProfilePage(): ReactNode {
           <div className="grid gap-8 sm:grid-cols-2">
             {profile.skills.map((group, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <div
-                  className="rounded-xl border p-6"
-                  style={{
-                    backgroundColor: 'var(--color-card-bg)',
-                    borderColor: 'var(--color-border)',
-                  }}
-                >
-                  <h3
-                    className="mb-4 text-lg font-semibold"
-                    style={{ color: 'var(--color-text-primary)' }}
-                  >
+                <div className="rounded-xl border border-border bg-card-bg p-6">
+                  <h3 className="mb-4 text-lg font-semibold text-text-primary">
                     {group.category[locale]}
                   </h3>
                   <div className="flex flex-wrap gap-2">
