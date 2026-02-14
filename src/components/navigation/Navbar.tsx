@@ -35,21 +35,14 @@ export function Navbar(): ReactNode {
       className={cn(
         'no-print sticky top-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'shadow-md backdrop-blur-md'
-          : ''
+          ? 'bg-bg-primary/85 shadow-md backdrop-blur-md border-b border-border'
+          : 'bg-bg-primary'
       )}
-      style={{
-        backgroundColor: isScrolled
-          ? 'color-mix(in srgb, var(--color-bg-primary) 85%, transparent)'
-          : 'var(--color-bg-primary)',
-        borderBottom: isScrolled ? '1px solid var(--color-border)' : 'none',
-      }}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
         <Link
           to="/"
-          className="text-lg font-bold tracking-tight transition-colors hover:opacity-80"
-          style={{ color: 'var(--color-text-primary)' }}
+          className="text-lg font-bold tracking-tight text-text-primary transition-colors hover:opacity-80"
         >
           Portfolio
         </Link>
@@ -67,8 +60,7 @@ export function Navbar(): ReactNode {
         </div>
 
         <button
-          className="rounded-lg p-2 transition-colors md:hidden"
-          style={{ color: 'var(--color-text-primary)' }}
+          className="rounded-lg p-2 text-text-primary transition-colors md:hidden"
           onClick={() => setIsMobileOpen(true)}
           aria-label="Open menu"
         >

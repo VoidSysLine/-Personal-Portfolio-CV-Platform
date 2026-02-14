@@ -8,6 +8,7 @@ import { formatDate } from '@/lib/dateUtils';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
+import { cn } from '@/lib/cn';
 
 export default function BlogPage(): ReactNode {
   const { locale, t } = useI18n();
@@ -34,11 +35,10 @@ export default function BlogPage(): ReactNode {
       <div className="mb-8 flex flex-wrap gap-2">
         <button
           onClick={() => setActiveTag('all')}
-          className="rounded-full px-4 py-1.5 text-sm font-medium transition-colors"
-          style={{
-            backgroundColor: activeTag === 'all' ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-            color: activeTag === 'all' ? 'white' : 'var(--color-text-secondary)',
-          }}
+          className={cn(
+            'rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
+            activeTag === 'all' ? 'bg-accent text-white' : 'bg-bg-tertiary text-text-secondary'
+          )}
         >
           {t('common.filterAll')}
         </button>
@@ -46,11 +46,10 @@ export default function BlogPage(): ReactNode {
           <button
             key={tag}
             onClick={() => setActiveTag(tag)}
-            className="rounded-full px-4 py-1.5 text-sm font-medium transition-colors"
-            style={{
-              backgroundColor: activeTag === tag ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-              color: activeTag === tag ? 'white' : 'var(--color-text-secondary)',
-            }}
+            className={cn(
+              'rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
+              activeTag === tag ? 'bg-accent text-white' : 'bg-bg-tertiary text-text-secondary'
+            )}
           >
             {tag}
           </button>
@@ -71,13 +70,13 @@ export default function BlogPage(): ReactNode {
                 <Card hover>
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold" style={{ color: 'var(--color-text-primary)' }}>
+                      <h3 className="text-xl font-semibold text-text-primary">
                         {entry.title[locale]}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
+                      <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                         {entry.teaser[locale]}
                       </p>
-                      <div className="mt-3 flex flex-wrap items-center gap-3 text-sm" style={{ color: 'var(--color-text-muted)' }}>
+                      <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-text-muted">
                         <span className="flex items-center gap-1">
                           <Calendar size={14} />
                           {formatDate(entry.date, locale)}
@@ -101,7 +100,7 @@ export default function BlogPage(): ReactNode {
           ))}
         </div>
       ) : (
-        <p className="text-center py-12" style={{ color: 'var(--color-text-muted)' }}>
+        <p className="text-center py-12 text-text-muted">
           {t('common.noResults')}
         </p>
       )}

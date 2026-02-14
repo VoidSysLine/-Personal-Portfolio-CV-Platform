@@ -29,19 +29,12 @@ export default function TestimonialsPage(): ReactNode {
             <Card className="h-full">
               <Quote
                 size={32}
-                className="mb-4 opacity-20"
-                style={{ color: 'var(--color-accent)' }}
+                className="mb-4 text-accent opacity-20"
               />
-              <blockquote
-                className="text-lg italic leading-relaxed"
-                style={{ color: 'var(--color-text-secondary)' }}
-              >
+              <blockquote className="text-lg italic leading-relaxed text-text-secondary">
                 &ldquo;{testimonial.quote[locale]}&rdquo;
               </blockquote>
-              <div
-                className="mt-6 flex items-center gap-3 border-t pt-4"
-                style={{ borderColor: 'var(--color-border)' }}
-              >
+              <div className="mt-6 flex items-center gap-3 border-t border-border pt-4">
                 {testimonial.companyUrl && (
                   <FaviconImage
                     url={testimonial.companyUrl}
@@ -50,13 +43,10 @@ export default function TestimonialsPage(): ReactNode {
                   />
                 )}
                 <div>
-                  <p
-                    className="font-semibold"
-                    style={{ color: 'var(--color-text-primary)' }}
-                  >
+                  <p className="font-semibold text-text-primary">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>
+                  <p className="text-sm text-text-muted">
                     {testimonial.position[locale]} — {testimonial.company}
                   </p>
                 </div>

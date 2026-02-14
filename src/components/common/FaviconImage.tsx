@@ -24,7 +24,7 @@ export function FaviconImage({
   if (hasError || !faviconUrl) {
     return (
       <span className={cn('inline-flex items-center justify-center rounded', className)}>
-        {fallbackIcon || <Building2 size={size} style={{ color: 'var(--color-text-muted)' }} />}
+        {fallbackIcon || <Building2 size={size} className="text-text-muted" />}
       </span>
     );
   }

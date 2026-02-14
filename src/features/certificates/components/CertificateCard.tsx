@@ -32,16 +32,13 @@ export function CertificateCard({ certificate }: CertificateCardProps): ReactNod
             url={certificate.issuerUrl}
             alt={certificate.issuer[locale]}
             size={28}
-            fallbackIcon={<Award size={28} style={{ color: 'var(--color-accent)' }} />}
+            fallbackIcon={<Award size={28} className="text-accent" />}
           />
           <div>
-            <h3
-              className="font-semibold"
-              style={{ color: 'var(--color-text-primary)' }}
-            >
+            <h3 className="font-semibold text-text-primary">
               {certificate.title[locale]}
             </h3>
-            <p className="text-sm" style={{ color: 'var(--color-accent)' }}>
+            <p className="text-sm text-accent">
               {certificate.issuer[locale]}
             </p>
           </div>
@@ -49,31 +46,21 @@ export function CertificateCard({ certificate }: CertificateCardProps): ReactNod
         <Badge variant="outline">{label[locale]}</Badge>
       </div>
 
-      <p
-        className="mt-3 text-sm"
-        style={{ color: 'var(--color-text-muted)' }}
-      >
+      <p className="mt-3 text-sm text-text-muted">
         {formatDate(certificate.date + '-01', locale)}
       </p>
 
-      <p
-        className="mt-2 text-sm leading-relaxed"
-        style={{ color: 'var(--color-text-secondary)' }}
-      >
+      <p className="mt-2 text-sm leading-relaxed text-text-secondary">
         {certificate.description[locale]}
       </p>
 
       {hasPdf && (
-        <div
-          className="mt-4 flex items-center gap-3 border-t pt-4"
-          style={{ borderColor: 'var(--color-border)' }}
-        >
+        <div className="mt-4 flex items-center gap-3 border-t border-border pt-4">
           <a
             href={certificate.pdfPath}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm font-medium transition-colors"
-            style={{ color: 'var(--color-accent)' }}
+            className="flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent-hover"
           >
             <ExternalLink size={14} />
             {t('common.viewPdf')}
@@ -81,8 +68,7 @@ export function CertificateCard({ certificate }: CertificateCardProps): ReactNod
           <a
             href={certificate.pdfPath}
             download
-            className="flex items-center gap-1.5 text-sm transition-colors"
-            style={{ color: 'var(--color-text-secondary)' }}
+            className="flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
           >
             <Download size={14} />
             {t('common.download')}

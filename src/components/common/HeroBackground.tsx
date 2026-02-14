@@ -106,8 +106,7 @@ export function HeroBackground({ variant = 'dotGrid', className }: HeroBackgroun
   return (
     <canvas
       ref={canvasRef}
-      className={cn('absolute inset-0 h-full w-full', className)}
-      style={{ zIndex: 0 }}
+      className={cn('absolute inset-0 z-0 h-full w-full', className)}
       aria-hidden="true"
     />
   );

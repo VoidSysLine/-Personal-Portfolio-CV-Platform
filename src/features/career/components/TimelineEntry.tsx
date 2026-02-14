@@ -39,8 +39,7 @@ export function TimelineEntry({
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
-        className="absolute left-4 z-10 h-3 w-3 -translate-x-1/2 rounded-full md:left-1/2"
-        style={{ backgroundColor: 'var(--color-accent)' }}
+        className="absolute left-4 z-10 h-3 w-3 -translate-x-1/2 rounded-full bg-accent md:left-1/2"
       />
 
       {/* Card */}
@@ -55,22 +54,16 @@ export function TimelineEntry({
           <div className="flex items-start gap-3">
             <FaviconImage url={organizationUrl} alt={organization} size={28} />
             <div className="flex-1">
-              <h3
-                className="text-lg font-semibold"
-                style={{ color: 'var(--color-text-primary)' }}
-              >
+              <h3 className="text-lg font-semibold text-text-primary">
                 {title}
               </h3>
-              <p
-                className="font-medium"
-                style={{ color: 'var(--color-accent)' }}
-              >
+              <p className="font-medium text-accent">
                 {organization}
               </p>
             </div>
           </div>
 
-          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm" style={{ color: 'var(--color-text-muted)' }}>
+          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-text-muted">
             <span className="flex items-center gap-1">
               <Calendar size={14} />
               {formatPeriod(period.start, period.end, locale, t('common.present'))}
@@ -85,10 +78,9 @@ export function TimelineEntry({
             {description.map((item, i) => (
               <li
                 key={i}
-                className="flex items-start gap-2 text-sm"
-                style={{ color: 'var(--color-text-secondary)' }}
+                className="flex items-start gap-2 text-sm text-text-secondary"
               >
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: 'var(--color-accent)' }} />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                 {item}
               </li>
             ))}

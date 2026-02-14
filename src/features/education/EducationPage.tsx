@@ -19,10 +19,7 @@ export default function EducationPage(): ReactNode {
       <SectionHeading title={t('nav.education')} />
 
       <div className="relative">
-        <div
-          className="absolute left-4 top-0 h-full w-0.5 md:left-8"
-          style={{ backgroundColor: 'var(--color-border)' }}
-        />
+        <div className="absolute left-4 top-0 h-full w-0.5 bg-border md:left-8" />
 
         <div className="space-y-8">
           {entries.map((entry, index) => (
@@ -34,10 +31,7 @@ export default function EducationPage(): ReactNode {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative ml-10 md:ml-16"
             >
-              <div
-                className="absolute -left-10 top-6 z-10 h-3 w-3 -translate-x-1/2 rounded-full md:-left-16"
-                style={{ backgroundColor: 'var(--color-accent)' }}
-              />
+              <div className="absolute -left-10 top-6 z-10 h-3 w-3 -translate-x-1/2 rounded-full bg-accent md:-left-16" />
 
               <Card>
                 <div className="flex items-start gap-3">
@@ -45,44 +39,29 @@ export default function EducationPage(): ReactNode {
                     url={entry.institutionUrl}
                     alt={entry.institution[locale]}
                     size={28}
-                    fallbackIcon={<GraduationCap size={28} style={{ color: 'var(--color-text-muted)' }} />}
+                    fallbackIcon={<GraduationCap size={28} className="text-text-muted" />}
                   />
                   <div className="flex-1">
-                    <h3
-                      className="text-lg font-semibold"
-                      style={{ color: 'var(--color-text-primary)' }}
-                    >
+                    <h3 className="text-lg font-semibold text-text-primary">
                       {entry.degree[locale]}
                     </h3>
-                    <p
-                      className="font-medium"
-                      style={{ color: 'var(--color-accent)' }}
-                    >
+                    <p className="font-medium text-accent">
                       {entry.institution[locale]}
                     </p>
                   </div>
                   {entry.grade && (
-                    <span
-                      className="rounded-lg px-3 py-1 text-sm font-semibold"
-                      style={{
-                        backgroundColor: 'var(--color-accent-light)',
-                        color: 'var(--color-accent)',
-                      }}
-                    >
+                    <span className="rounded-lg bg-accent-light px-3 py-1 text-sm font-semibold text-accent">
                       {locale === 'de' ? 'Note' : 'Grade'}: {entry.grade}
                     </span>
                   )}
                 </div>
 
-                <div className="mt-3 flex items-center gap-2 text-sm" style={{ color: 'var(--color-text-muted)' }}>
+                <div className="mt-3 flex items-center gap-2 text-sm text-text-muted">
                   <Calendar size={14} />
                   {formatPeriod(entry.period.start, entry.period.end, locale, t('common.present'))}
                 </div>
 
-                <p
-                  className="mt-4 text-sm leading-relaxed"
-                  style={{ color: 'var(--color-text-secondary)' }}
-                >
+                <p className="mt-4 text-sm leading-relaxed text-text-secondary">
                   {entry.description[locale]}
                 </p>
               </Card>

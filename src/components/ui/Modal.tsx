@@ -53,24 +53,16 @@ export function Modal({ isOpen, onClose, children, title, size = 'md' }: ModalPr
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.2 }}
-            className={`relative w-full overflow-hidden rounded-xl shadow-2xl ${sizeStyles[size]}`}
-            style={{
-              backgroundColor: 'var(--color-bg-primary)',
-              border: '1px solid var(--color-border)',
-            }}
+            className={`relative w-full overflow-hidden rounded-xl border border-border bg-bg-primary shadow-2xl ${sizeStyles[size]}`}
           >
             {title && (
-              <div
-                className="flex items-center justify-between border-b px-6 py-4"
-                style={{ borderColor: 'var(--color-border)' }}
-              >
-                <h2 className="text-lg font-semibold" style={{ color: 'var(--color-text-primary)' }}>
+              <div className="flex items-center justify-between border-b border-border px-6 py-4">
+                <h2 className="text-lg font-semibold text-text-primary">
                   {title}
                 </h2>
                 <button
                   onClick={onClose}
-                  className="rounded-lg p-1.5 transition-colors hover:bg-[var(--color-bg-tertiary)]"
-                  style={{ color: 'var(--color-text-secondary)' }}
+                  className="rounded-lg p-1.5 text-text-secondary transition-colors hover:bg-bg-tertiary"
                   aria-label="Close"
                 >
                   <X size={20} />
@@ -80,14 +72,13 @@ export function Modal({ isOpen, onClose, children, title, size = 'md' }: ModalPr
             {!title && (
               <button
                 onClick={onClose}
-                className="absolute right-4 top-4 z-10 rounded-lg p-1.5 transition-colors hover:bg-[var(--color-bg-tertiary)]"
-                style={{ color: 'var(--color-text-secondary)' }}
+                className="absolute right-4 top-4 z-10 rounded-lg p-1.5 text-text-secondary transition-colors hover:bg-bg-tertiary"
                 aria-label="Close"
               >
                 <X size={20} />
               </button>
             )}
-            <div className="overflow-y-auto" style={{ maxHeight: '85vh' }}>
+            <div className="max-h-[85vh] overflow-y-auto">
               {children}
             </div>
           </motion.div>

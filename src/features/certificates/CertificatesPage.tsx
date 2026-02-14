@@ -4,6 +4,7 @@ import { useI18n } from '@/hooks/useI18n';
 import { getCertificateEntries } from '@/lib/dataLoader';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { CertificateCard } from './components/CertificateCard';
+import { cn } from '@/lib/cn';
 import type { CertificateCategory } from '@/types/certificate';
 
 const categories: { key: CertificateCategory | 'all'; label: { de: string; en: string } }[] = [
@@ -35,11 +36,10 @@ export default function CertificatesPage(): ReactNode {
           <button
             key={cat.key}
             onClick={() => setActiveCategory(cat.key)}
-            className="rounded-full px-4 py-1.5 text-sm font-medium transition-colors"
-            style={{
-              backgroundColor: activeCategory === cat.key ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-              color: activeCategory === cat.key ? 'white' : 'var(--color-text-secondary)',
-            }}
+            className={cn(
+              'rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
+              activeCategory === cat.key ? 'bg-accent text-white' : 'bg-bg-tertiary text-text-secondary'
+            )}
           >
             {cat.label[locale]}
           </button>
@@ -61,7 +61,7 @@ export default function CertificatesPage(): ReactNode {
           ))}
         </div>
       ) : (
-        <p className="text-center py-12" style={{ color: 'var(--color-text-muted)' }}>
+        <p className="text-center py-12 text-text-muted">
           {t('common.noResults')}
         </p>
       )}

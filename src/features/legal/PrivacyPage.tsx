@@ -14,10 +14,7 @@ export default function PrivacyPage(): ReactNode {
 
       <SectionHeading title={privacy.title} />
 
-      <div
-        className="prose max-w-none whitespace-pre-line"
-        style={{ color: 'var(--color-text-secondary)' }}
-      >
+      <div className="prose max-w-none whitespace-pre-line text-text-secondary">
         {privacy.content}
       </div>
     </>

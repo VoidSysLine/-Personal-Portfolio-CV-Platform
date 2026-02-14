@@ -19,8 +19,8 @@ export function NavLink({ to, children, onClick, className }: NavLinkProps): Rea
         cn(
           'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
           isActive
-            ? 'text-[var(--color-accent)] bg-[var(--color-accent-light)]'
-            : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)]',
+            ? 'text-accent bg-accent-light'
+            : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary',
           className
         )
       }

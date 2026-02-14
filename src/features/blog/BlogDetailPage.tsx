@@ -45,7 +45,7 @@ export default function BlogDetailPage(): ReactNode {
   if (!entry) {
     return (
       <div className="py-20 text-center">
-        <p style={{ color: 'var(--color-text-muted)' }}>
+        <p className="text-text-muted">
           {locale === 'de' ? 'Artikel nicht gefunden.' : 'Article not found.'}
         </p>
         <Link to="/blog" className="mt-4 inline-block">
@@ -62,17 +62,17 @@ export default function BlogDetailPage(): ReactNode {
       <title>{entry.title[locale]} — Blog</title>
       <meta name="description" content={entry.teaser[locale]} />
 
-      <Link to="/blog" className="inline-flex items-center gap-1.5 mb-8 text-sm transition-colors" style={{ color: 'var(--color-accent)' }}>
+      <Link to="/blog" className="inline-flex items-center gap-1.5 mb-8 text-sm text-accent transition-colors hover:text-accent-hover">
         <ArrowLeft size={16} />
         {t('common.backToOverview')}
       </Link>
 
       <article className="mx-auto max-w-3xl">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold sm:text-4xl" style={{ color: 'var(--color-text-primary)' }}>
+          <h1 className="text-3xl font-bold text-text-primary sm:text-4xl">
             {entry.title[locale]}
           </h1>
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm" style={{ color: 'var(--color-text-muted)' }}>
+          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-text-muted">
             <span className="flex items-center gap-1">
               <Calendar size={14} />
               {formatDate(entry.date, locale)}
@@ -101,13 +101,13 @@ export default function BlogDetailPage(): ReactNode {
         )}
 
         {error && (
-          <p className="rounded-lg border p-4" style={{ color: 'var(--color-error)', borderColor: 'var(--color-error)' }}>
+          <p className="rounded-lg border border-error p-4 text-error">
             {error}
           </p>
         )}
 
         {!isLoading && !error && (
-          <div className="prose prose-slate max-w-none dark:prose-invert" style={{ color: 'var(--color-text-secondary)' }}>
+          <div className="prose prose-slate max-w-none text-text-secondary dark:prose-invert">
             <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
               {content}
             </ReactMarkdown>
