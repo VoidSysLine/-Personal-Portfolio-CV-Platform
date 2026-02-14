@@ -1,0 +1,28 @@
+import type { ReactNode } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useI18n } from '@/hooks/useI18n';
+import { getLegal } from '@/lib/dataLoader';
+import { SectionHeading } from '@/components/common/SectionHeading';
+
+export default function PrivacyPage(): ReactNode {
+  const { locale, t } = useI18n();
+  const legal = getLegal();
+  const privacy = legal.privacy[locale];
+
+  return (
+    <>
+      <Helmet>
+        <title>{t('footer.privacy')} — Portfolio</title>
+      </Helmet>
+
+      <SectionHeading title={privacy.title} />
+
+      <div
+        className="prose max-w-none whitespace-pre-line"
+        style={{ color: 'var(--color-text-secondary)' }}
+      >
+        {privacy.content}
+      </div>
+    </>
+  );
+}

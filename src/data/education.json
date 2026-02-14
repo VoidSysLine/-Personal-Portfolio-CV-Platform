@@ -1,0 +1,14 @@
+[
+  {
+    "id": "hs-trier-winf",
+    "institution": { "de": "Hochschule Trier", "en": "Trier University of Applied Sciences" },
+    "degree": { "de": "B.Sc. Wirtschaftsinformatik", "en": "B.Sc. Business Informatics" },
+    "period": { "start": "2021-10", "end": "2026-02" },
+    "institutionUrl": "https://www.hochschule-trier.de",
+    "description": {
+      "de": "Schwerpunkte: Software Engineering, Datenbanken, Betriebswirtschaftslehre, Projektmanagement",
+      "en": "Focus areas: Software Engineering, Databases, Business Administration, Project Management"
+    },
+    "grade": "1.8"
+  }
+]

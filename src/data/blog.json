@@ -1,0 +1,14 @@
+[
+  {
+    "id": "getting-started-typescript",
+    "title": { "de": "Einstieg in TypeScript", "en": "Getting Started with TypeScript" },
+    "date": "2026-01-15",
+    "teaser": {
+      "de": "Warum TypeScript in modernen Webprojekten unverzichtbar ist und wie der Einstieg gelingt.",
+      "en": "Why TypeScript is indispensable in modern web projects and how to get started."
+    },
+    "tags": ["TypeScript", "Web Development"],
+    "markdownFile": { "de": "einstieg-typescript.md", "en": "getting-started-typescript.md" },
+    "featured": true
+  }
+]

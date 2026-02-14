@@ -1,0 +1,39 @@
+{
+  "name": "Max Mustermann",
+  "title": { "de": "GPS Process & Systems Group Manager", "en": "GPS Process & Systems Group Manager" },
+  "tagline": { "de": "Prozesse optimieren. Systeme gestalten. Teams befähigen.", "en": "Optimizing processes. Designing systems. Empowering teams." },
+  "bio": {
+    "de": "Erfahrener Manager mit Schwerpunkt auf Prozessoptimierung und Systemlandschaften. Verbinde technisches Know-how mit strategischem Denken, um nachhaltige Lösungen für komplexe Herausforderungen zu entwickeln.",
+    "en": "Experienced manager specializing in process optimization and system landscapes. Combining technical expertise with strategic thinking to develop sustainable solutions for complex challenges."
+  },
+  "profileImage": "/assets/images/profile/profile.jpg",
+  "cvPdf": "/assets/documents/cv/lebenslauf.pdf",
+  "location": { "de": "Trier, Deutschland", "en": "Trier, Germany" },
+  "email": "mail@example.com",
+  "social": {
+    "github": "https://github.com/username",
+    "linkedin": "https://linkedin.com/in/username"
+  },
+  "skills": [
+    {
+      "category": { "de": "Programmiersprachen", "en": "Programming Languages" },
+      "items": ["Python", "TypeScript", "Java", "SQL"]
+    },
+    {
+      "category": { "de": "Frameworks & Libraries", "en": "Frameworks & Libraries" },
+      "items": ["React", "Node.js", "Spring Boot", "Tailwind CSS"]
+    },
+    {
+      "category": { "de": "Tools & Plattformen", "en": "Tools & Platforms" },
+      "items": ["SAP", "Git", "Docker", "Jira", "Confluence"]
+    },
+    {
+      "category": { "de": "Methoden", "en": "Methods" },
+      "items": ["Agile/Scrum", "Process Mining", "BPMN", "Design Thinking"]
+    }
+  ],
+  "interests": {
+    "de": ["Softwarearchitektur", "Open Source", "Prozessautomatisierung", "Continuous Learning"],
+    "en": ["Software Architecture", "Open Source", "Process Automation", "Continuous Learning"]
+  }
+}

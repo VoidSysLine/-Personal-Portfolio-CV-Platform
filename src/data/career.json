@@ -1,0 +1,28 @@
+[
+  {
+    "id": "jti-gps-manager",
+    "company": { "de": "JTI (Japan Tobacco International)", "en": "JTI (Japan Tobacco International)" },
+    "role": { "de": "GPS Process & Systems Group Manager", "en": "GPS Process & Systems Group Manager" },
+    "location": { "de": "Trier, Deutschland", "en": "Trier, Germany" },
+    "period": { "start": "2026-04", "end": null },
+    "companyUrl": "https://www.jti.com",
+    "description": {
+      "de": ["Koordination System-Setup mit BTS und GSD Teams", "Prozessoptimierung im globalen Supply Chain Management", "Leitung cross-funktionaler Projektteams"],
+      "en": ["Coordinating system setup with BTS and GSD teams", "Process optimization in global supply chain management", "Leading cross-functional project teams"]
+    },
+    "tags": ["SAP", "Process Management", "Team Leadership", "Supply Chain"]
+  },
+  {
+    "id": "example-senior-dev",
+    "company": { "de": "Tech Solutions GmbH", "en": "Tech Solutions GmbH" },
+    "role": { "de": "Senior Software Developer", "en": "Senior Software Developer" },
+    "location": { "de": "Trier, Deutschland", "en": "Trier, Germany" },
+    "period": { "start": "2023-06", "end": "2026-03" },
+    "companyUrl": "https://www.example.com",
+    "description": {
+      "de": ["Entwicklung von Enterprise Web Applications mit React und TypeScript", "Architekturdesign und Code Reviews", "Mentoring von Junior-Entwicklern"],
+      "en": ["Development of enterprise web applications with React and TypeScript", "Architecture design and code reviews", "Mentoring junior developers"]
+    },
+    "tags": ["React", "TypeScript", "Node.js", "PostgreSQL"]
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "example-cert",
+    "title": { "de": "Beispiel-Zertifikat", "en": "Example Certificate" },
+    "issuer": { "de": "Zertifizierungsstelle", "en": "Certification Authority" },
+    "issuerUrl": "https://www.example.com",
+    "date": "2025-06",
+    "category": "certification",
+    "pdfPath": "/assets/documents/certificates/example-cert.pdf",
+    "description": {
+      "de": "Beschreibung des Zertifikats.",
+      "en": "Certificate description."
+    }
+  }
+]

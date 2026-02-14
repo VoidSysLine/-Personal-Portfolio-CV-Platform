@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "profile": "Profil",
+    "career": "Karriere",
+    "education": "Bildung",
+    "projects": "Projekte",
+    "certificates": "Zertifikate",
+    "blog": "Blog",
+    "testimonials": "Referenzen",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "readMore": "Weiterlesen",
+    "download": "Herunterladen",
+    "viewPdf": "PDF ansehen",
+    "present": "Heute",
+    "backToOverview": "Zurück zur Übersicht",
+    "filterAll": "Alle",
+    "noResults": "Keine Ergebnisse gefunden.",
+    "yearsExperience": "Jahre Erfahrung",
+    "projectsCount": "Projekte",
+    "certificatesCount": "Zertifikate",
+    "technologiesCount": "Technologien"
+  },
+  "contact": {
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "Ihre E-Mail",
+    "subjectPlaceholder": "Betreff",
+    "messagePlaceholder": "Ihre Nachricht...",
+    "submit": "Absenden",
+    "successMessage": "Danke! Ihre Nachricht wurde vorbereitet.",
+    "validation": {
+      "nameRequired": "Name ist erforderlich.",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein.",
+      "messageRequired": "Nachricht ist erforderlich."
+    }
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "© {year} — Alle Rechte vorbehalten."
+  },
+  "print": {
+    "title": "Lebenslauf",
+    "personalInfo": "Persönliche Daten",
+    "workExperience": "Berufserfahrung",
+    "educationSection": "Bildung",
+    "skillsSection": "Kompetenzen",
+    "certificatesSection": "Zertifikate"
+  }
+}
