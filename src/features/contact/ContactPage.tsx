@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
 import { useI18n } from '@/hooks/useI18n';
 import { getProfile } from '@/lib/dataLoader';
@@ -14,9 +13,7 @@ export default function ContactPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('nav.contact')} — Portfolio</title>
-      </Helmet>
+      <title>{t('nav.contact')} — Portfolio</title>
 
       <SectionHeading title={t('nav.contact')} />
 

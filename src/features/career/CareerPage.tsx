@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useI18n } from '@/hooks/useI18n';
 import { getCareerEntries } from '@/lib/dataLoader';
 import { SectionHeading } from '@/components/common/SectionHeading';
@@ -12,9 +11,7 @@ export default function CareerPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('nav.career')} — Portfolio</title>
-      </Helmet>
+      <title>{t('nav.career')} — Portfolio</title>
 
       <SectionHeading title={t('nav.career')} />
 

@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Calendar, GraduationCap } from 'lucide-react';
 import { useI18n } from '@/hooks/useI18n';
@@ -15,9 +14,7 @@ export default function EducationPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('nav.education')} — Portfolio</title>
-      </Helmet>
+      <title>{t('nav.education')} — Portfolio</title>
 
       <SectionHeading title={t('nav.education')} />
 

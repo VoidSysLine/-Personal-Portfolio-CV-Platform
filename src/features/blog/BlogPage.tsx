@@ -1,5 +1,4 @@
 import { useMemo, useState, type ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar } from 'lucide-react';
@@ -28,9 +27,7 @@ export default function BlogPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('nav.blog')} — Portfolio</title>
-      </Helmet>
+      <title>{t('nav.blog')} — Portfolio</title>
 
       <SectionHeading title={t('nav.blog')} />
 

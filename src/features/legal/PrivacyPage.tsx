@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useI18n } from '@/hooks/useI18n';
 import { getLegal } from '@/lib/dataLoader';
 import { SectionHeading } from '@/components/common/SectionHeading';
@@ -11,9 +10,7 @@ export default function PrivacyPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('footer.privacy')} — Portfolio</title>
-      </Helmet>
+      <title>{t('footer.privacy')} — Portfolio</title>
 
       <SectionHeading title={privacy.title} />
 

@@ -1,5 +1,4 @@
 import { useState, useMemo, type ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useI18n } from '@/hooks/useI18n';
 import { getProjectEntries } from '@/lib/dataLoader';
 import { SectionHeading } from '@/components/common/SectionHeading';
@@ -23,9 +22,7 @@ export default function ProjectsPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('nav.projects')} — Portfolio</title>
-      </Helmet>
+      <title>{t('nav.projects')} — Portfolio</title>
 
       <SectionHeading title={t('nav.projects')} />
 
