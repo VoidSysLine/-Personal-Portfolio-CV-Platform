@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import { useI18n } from '@/hooks/useI18n';
@@ -14,9 +13,7 @@ export default function TestimonialsPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('nav.testimonials')} — Portfolio</title>
-      </Helmet>
+      <title>{t('nav.testimonials')} — Portfolio</title>
 
       <SectionHeading title={t('nav.testimonials')} />
 

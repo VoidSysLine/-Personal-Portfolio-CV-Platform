@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Download, Mail, Printer, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { useI18n } from '@/hooks/useI18n';
 import { getProfile, getCareerEntries, getProjectEntries, getCertificateEntries } from '@/lib/dataLoader';
 import { calculateYearsOfExperience } from '@/lib/dateUtils';
@@ -38,10 +37,8 @@ export default function ProfilePage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{profile.name} — {profile.title[locale]}</title>
-        <meta name="description" content={profile.bio[locale]} />
-      </Helmet>
+      <title>{profile.name} — {profile.title[locale]}</title>
+      <meta name="description" content={profile.bio[locale]} />
 
       {/* Hero Section */}
       <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">

@@ -1,6 +1,5 @@
 import { useState, useEffect, type ReactNode } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -60,10 +59,8 @@ export default function BlogDetailPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{entry.title[locale]} — Blog</title>
-        <meta name="description" content={entry.teaser[locale]} />
-      </Helmet>
+      <title>{entry.title[locale]} — Blog</title>
+      <meta name="description" content={entry.teaser[locale]} />
 
       <Link to="/blog" className="inline-flex items-center gap-1.5 mb-8 text-sm transition-colors" style={{ color: 'var(--color-accent)' }}>
         <ArrowLeft size={16} />

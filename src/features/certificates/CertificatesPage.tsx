@@ -1,5 +1,4 @@
 import { useState, useMemo, type ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useI18n } from '@/hooks/useI18n';
 import { getCertificateEntries } from '@/lib/dataLoader';
@@ -27,9 +26,7 @@ export default function CertificatesPage(): ReactNode {
 
   return (
     <>
-      <Helmet>
-        <title>{t('nav.certificates')} — Portfolio</title>
-      </Helmet>
+      <title>{t('nav.certificates')} — Portfolio</title>
 
       <SectionHeading title={t('nav.certificates')} />
 
